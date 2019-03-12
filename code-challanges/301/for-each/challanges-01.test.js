@@ -1,6 +1,6 @@
 'use strict';
 
-// import { arrayExpression } from "@babel/types"; => commented out because it was throwing an error that was preventing my tests from running. 
+// import { arrayExpression } from "@babel/types"; => commented out because it was throwing an error that was preventing my tests from running.
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
@@ -44,7 +44,7 @@ const addNumbers = (num, arr, times, callback) => {
     callback(arr, num);
   }
   return arr;
-} 
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -147,7 +147,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let output_array = [];
+  arr.forEach((i) => {
+    if(i %3 === 0 && i %5 === 0){
+      output_array.push('Fizz Buzz')
+    }
+    else if(i % 3 === 0){
+      output_array.push('Fizz')
+    }
+    else if( i % 5 === 0){
+      output_array.push('Buzz')
+    }
+    else(output_array.push (i))
+  });
+  return output_array;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -211,4 +224,4 @@ describe('Testing challenge 7', () => {
     expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
     expect(fizzbuzz(inputs).length).toStrictEqual(16);
   });
-}); 
+});
