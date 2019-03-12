@@ -59,19 +59,17 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  console.log(arr);
   if (num % 3 === 2){
-    console.log(arr);
     arr.pop();
   }
-  return arr;
 }
 
 const removeElements = (arr, callback) => {
-  for (let i = 0; i < arr.length; i ++){
-    arr = callback(i, arr);
-    return arr;
+  let array_length = arr.length
+  for (let i = 0; i < array_length; i ++){
+    callback(i, arr);
   }
+  return arr;
 }
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
