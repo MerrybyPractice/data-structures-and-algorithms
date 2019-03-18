@@ -20,8 +20,8 @@ const howMuchPencil = (str) => {
   }
   result.push('');
   return result;
-};
 
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -79,10 +79,17 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  
+
+  for(let i=0; i < recipe.ingredients.length; i++){
+
+    let line = recipe.ingredients[i]
+    result.push(line.slice(line.indexOf((' '),[3])+1))
+  }
   return result;
+
 };
-console.log(result);
+
+listFoods(gruffaloCrumble)
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -93,10 +100,25 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  
+
+  let recipeString = recipe.ingredients.toString();
+
+  let recipeArray = recipeString.split(',');
+
+  console.log(recipeArray);
+
+  for(let i=0; i < recipeArray.length; i++){
+    let line = recipeArray[i]
+    console.log(line.split(' ', 2)) 
+    
+    
+  }
+  console.log(result)
   return result;
+  
 };
 
+splitFoods(gruffaloCrumble);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
@@ -109,10 +131,12 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  let recipeString = recipe.steps.toString();
+  for(let i = 0; i < recipeString.length; i++){
+  }
   return result;
 };
-
+stepActions(gruffaloCrumble);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
@@ -127,8 +151,21 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  // Solution code here...
+  for(let i = 0; i < arr.length; i ++){
+    // if (i % 2 === 0){ 
+      //proves that modulo works with i. No issues here, only issues when splice is introduced.
+    //   console.log(i, true);
+    // }else if (){
+    //   console.log (i, false);
+    // }
+    if (i % 2 === 0){
+      arr.splice(i,1);
+      console.log(i)
+    }
+    console.log(arr)
+  }
 };
+removeEvenValues([1,2,3,4,5,6,8,9,10]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
