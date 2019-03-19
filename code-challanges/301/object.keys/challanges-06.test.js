@@ -19,10 +19,6 @@ const getCourseKeys = (obj) => {
   return courseKeys;
 };
 
-//getCourseKeys(courseInfo);
-
-
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 Use the characters data below for the remainder of the challenges.
@@ -76,8 +72,13 @@ let characters = [
 ];
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let numChar = 0
+  for(let name in arr){
+    numChar ++
+  }
+  return numChar
 };
+totalCharacters(characters);
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -87,7 +88,9 @@ Write a function named getHouses that returns a new array containing the names o
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.forEach( character => {
+    houses.push(character.house)
+  });
   return houses;
 };
 
