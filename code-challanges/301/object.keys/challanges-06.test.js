@@ -106,9 +106,20 @@ hasChildrenValues(characters, 'Sansa') will return true
 hasChildrenValues(characters, 'Eddard') will return false
 ------------------------------------------------------------------------------------------------ */
 
-const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+const hasChildrenValues = (arr, name) => {
+  let hasChildren
+  arr.forEach( character => {
+    if (character.name === name){
+      if( character.children.length >= 1){
+        hasChildren = true;
+      }else{
+        hasChildren = false;
+      }
+    }
+  })
+  return hasChildren;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -118,10 +129,19 @@ Write a function named hasChildrenEntries that is similar to your hasChildrenVal
 The input and output of this function are the same as the input and output from challenge 4.
 ------------------------------------------------------------------------------------------------ */
 
-const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
-};
-
+const hasChildrenEntries = (arr, name) => {
+  let hasChildren;
+  Object.entries(characters).forEach(entry =>{
+    if(entry[1].name === name){
+      if (entry[1].children.length >= 1){
+        hasChildren = true
+      }else{
+        hasChildren = false
+      }
+    }
+  });
+  return hasChildren
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
@@ -134,9 +154,25 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
-  return sizes;
+
+  function House(house, members){
+    this.house = house;
+    this.members = members;
+  }
+  arr.forEach(character => {
+    console.log(character);
+    for(let att in character){
+      console.log(att)
+      if (att !== 'house'){
+        console.log(character[att])
+          
+      }
+    }
+  })
+
 };
+
+houseSize(characters);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
