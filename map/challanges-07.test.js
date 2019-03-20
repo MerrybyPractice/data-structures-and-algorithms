@@ -10,12 +10,15 @@ You may choose to complete this challenge using a for loop, for...in syntax, or 
 For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and 2 ^ 3 = 8.
 ------------------------------------------------------------------------------------------------ */
 
-const forLoopTwoToThe = (arr) => {
-  return arr.map(value => Math.pow(2, value))
-  
-};
+// const forLoopTwoToThe = (arr) => {
+//   let returnArr = [];
+//   for(let i=0; i<arr.length; i++){
+//     returnArr.push(Math.pow(2, i));
+//   }
+//   return returnArr
+// };
 
-forLoopTwoToThe([1,2,3,4])
+// forLoopTwoToThe([1,2,3,4])
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -23,9 +26,11 @@ CHALLENGE 2
 Write a function named forEachTwoToThe that produces the same output as your forLoopTwoToThe function from challenge 1, but uses forEach instead of a for loop.
 ------------------------------------------------------------------------------------------------ */
 
-const forEachTwoToThe = (arr) => {
-  // Solution code here...
-};
+// const forEachTwoToThe = (arr) => {
+//  forEach( (value) => arr){
+//    Math.pow(2, value)
+//  }
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -34,7 +39,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  return arr.map(value => Math.pow(2, value))
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,11 +52,17 @@ Read the MDN documentation on String.charCodeAt() if necessary.
 For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
-const charCode = (arr) => {
-  // Solution code here...
-};
+//looks like currently only returning one val - why not itterating fully??
 
-/* ------------------------------------------------------------------------------------------------
+// const charCode = (arr) => {
+//   return arr.map((value,index) => value.charCodeAt(index))
+// };
+  
+// charCode(['HI', 'lol', 'wat'])
+// console.log(charCode)
+
+/* 
+------------------------------------------------------------------------------------------------
 CHALLENGE 5
 
 Write a function that, given an array of numbers as input, uses map to return a new array where each element is either the string "even" or the string "odd", based on each value.
@@ -61,10 +72,11 @@ If any element in the array is not a number, the resulting array should have the
 For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
-const evenOdd = (arr) => {
-  // Solution code here...
-};
+//Was only hitting NA path in chained if statements, refactored into turnery's - seems more broken. WILD.
 
+const evenOdd = (arr) => {
+  return arr.map((val)=> { val%0 ? 'True' : val%1? 'False': 'NA'})};
+evenOdd([1,2,5,6]);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
