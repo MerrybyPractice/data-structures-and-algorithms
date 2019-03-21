@@ -75,7 +75,7 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 //Was only hitting NA path in chained if statements, refactored into turnery's - seems more broken. WILD.
 
 const evenOdd = (arr) => {
-  return arr.map((val)=> { val%0 ? 'True' : val%1? 'False': 'NA'})};
+  return arr.map((val)=> { val%0? 'True' : val%1? 'False': 'NA'})};
 evenOdd([1,2,5,6]);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
