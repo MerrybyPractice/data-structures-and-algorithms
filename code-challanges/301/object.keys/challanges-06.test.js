@@ -131,7 +131,7 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, name) => {
   let hasChildren;
-  Object.entries(characters).forEach(entry =>{
+  Object.entries(arr).forEach(entry =>{
     if(entry[1].name === name){
       if (entry[1].children.length >= 1){
         hasChildren = true
@@ -141,7 +141,8 @@ const hasChildrenEntries = (arr, name) => {
     }
   });
   return hasChildren
-}
+} //option for a turnery
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
@@ -165,7 +166,7 @@ const houseSize = (arr) => {
       console.log(att)
       if (att !== 'house'){
         console.log(character[att])
-          
+
       }
     }
   })

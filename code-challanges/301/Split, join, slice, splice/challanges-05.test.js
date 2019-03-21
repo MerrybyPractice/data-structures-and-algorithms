@@ -1,5 +1,7 @@
 'use strict';
 
+//import { toUnicode } from "punycode";
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 
@@ -84,10 +86,14 @@ const listFoods = (recipe) => {
 
     let line = recipe.ingredients[i]
     result.push(line.slice(line.indexOf((' '),[3])+1))
+
+    console.log(result)
   }
   return result;
 
 };
+
+
 
 listFoods(gruffaloCrumble)
 /* ------------------------------------------------------------------------------------------------
@@ -99,6 +105,9 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
+
+  //TODO: refactor using for each, slice(2)
+
   let result = [];
 
   let recipeString = recipe.ingredients.toString();
@@ -109,7 +118,7 @@ const splitFoods = (recipe) => {
 
   for(let i=0; i < recipeArray.length; i++){
     let line = recipeArray[i]
-    console.log(line.split(' ', 2)) 
+    console.log(line.split(' ').slice(2)); 
     
     
   }
