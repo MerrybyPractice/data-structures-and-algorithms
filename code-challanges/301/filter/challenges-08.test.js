@@ -19,13 +19,22 @@ The callback function to filter should include or utilize a regular expression p
 
 For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 'hound'].
 ------------------------------------------------------------------------------------------------ */
+//currently showing an undefined addition to testing array - unsure why. 
+// let vowelArr = ['the','sweetness','woahhhh','htht','if','are'];
+let vowelHunter = new RegExp (/(\w+?[aeiouAEIOU])/);
 
+// console.log(vowelHunter);
+// console.log(vowelArr)
+// //console.log(vowelArr.filter(vowelHunter))
+// const filterStringsWithVowels = ((arr) => {
+//   console.log(arr);
+  
+// }) 
+const filterStringsWithVowels = ((arr) => arr.filter(n =>(vowelHunter.test(n))));
 
-const filterStringsWithVowels = (arr) => {
-  // Solution code here...
-};
+// filterStringsWithVowels(vowelArr);
 
-
+// console.log(filterStringsWithVowels());
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -34,9 +43,9 @@ Write a function named notInFirstArray that, given two arrays as input, uses fil
 For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
-const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
-};
+const notInFirstArray = ((forbiddenValues, arr) => {
+  arr.forEach().filter(!(arr.includes(forbiddenValues)))
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -78,7 +87,7 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
+  //arr.filter(move => arr.name move > minbaseStat)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -143,7 +152,8 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  // characters.children.length 
+  //filter(characters.name)
 };
 
 /* ------------------------------------------------------------------------------------------------
