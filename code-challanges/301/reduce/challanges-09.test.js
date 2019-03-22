@@ -8,8 +8,12 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
+const countNumberOfElements = (arr) => {return arr.reduce((eleCt) => {
+
+  eleCt++;
+  return eleCt
+
+}, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,9 +72,12 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-const returnNames = (arr) => {
-  // Solution code here...
+const returnNames = (arr) => {return arr.reduce((acc, name) => {
+  acc.push(name.name)
+  return acc;
+},[])
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -81,8 +88,15 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (arr) => {
-  // Solution code here...
+
+  let str = arr.split('');
+
+  return str.reduce((accum, curLet)=>{
+
+    return curLet + accum;
+  }, '');
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -133,8 +147,13 @@ const characters = [
   },
 ];
 
-const countNumberOfChildren = (arr) => {
-  // Solution code here...
+const countNumberOfChildren = (char) => {return char.reduce((accumu, fam)=> {
+  // eslint-disable-next-line no-unused-vars
+  for(let child in fam.children){
+    accumu ++
+  }
+  return accumu
+},0);
 };
 
 /* ------------------------------------------------------------------------------------------------
