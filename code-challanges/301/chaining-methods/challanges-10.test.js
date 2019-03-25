@@ -152,9 +152,20 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
-};
+//return r2d2
+//map to check each one inside the reduce?
+//reduce to return final
 
+  data.reduce( characters => {
+    data.map(characters  => (individual, i){
+      //need to store previous value for comparison
+      (individual[i].height >= individual[b].height)
+  })
+
+  }, '')
+
+};
+findShortest(starWarsData)
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
