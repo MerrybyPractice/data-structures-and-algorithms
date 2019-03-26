@@ -14,11 +14,6 @@ const validatePin = (pin) => {
 
   return (pinString.match(regex)) ? true : false;
 
-  // if(pinString.match(regex)){
-  //   return true
-  // }else{
-  //   return false
-  // }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,7 +33,10 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+  let regex = /\S+[a-z,A-Z,0-9]+@[a-z,A-Z,0-9]+\.(net|com|org)+/
+
+  return (email.match(regex)) ? true : false;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
