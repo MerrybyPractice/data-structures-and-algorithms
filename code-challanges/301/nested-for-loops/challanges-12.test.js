@@ -135,7 +135,7 @@ const calculateProduct = (numbers) => {
   for(let i = 0; i < numbers.length; i++){
     for(let j = 0; j < numbers[i].length; j++){
       storage = storage * numbers[i][j]
-    } 
+    }
   }
   return storage
 };
@@ -156,9 +156,17 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
-};
+  let storage = 0;
+  let days = 0;
+  for(let i=0; i < weather.length; i++){
 
+    for(let j=0; j < weather[i].length; j++){
+      storage += weather[i][j]
+      days ++
+    }
+  }
+  return storage/days;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
 
@@ -177,7 +185,17 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let weeklyAverages= [];
+  for( let i=0; i < weather.length; i++){
+    let storage = 0;
+    let days = 0;
+    for(let j=0; j<weather[i].length; j++){
+      storage += weather[i][j]
+      days ++
+    }
+    weeklyAverages.push(storage/days);
+  }
+  return Math.min(...weeklyAverages)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -194,8 +212,14 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 
 const excel = (str) => {
   // Solution code here...
+  let finals= []
+  let fixedString = str.split('\n')
+  for (let i = 0; i < fixedString.length; i++){
+    finals.push(fixedString[i].split(',').reduce((idxi,reducer) => parseInt(idxi)+parseInt(reducer), 0))
+  }
+  return finals
 };
-
+console.log(excel('1,1,1\n4,4,4\n9,9,9'))
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
