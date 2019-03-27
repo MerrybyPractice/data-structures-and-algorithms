@@ -48,8 +48,21 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
-};
+
+  let allTheData = []
+
+  hours.forEach((hour, i) => {
+
+    let formattedData = {
+      sales: `${data[i]} cookies`,
+      time: `${hour}`
+    }
+    allTheData.push(formattedData)
+  })
+  return allTheData
+}
+
+salesData(hoursOpen, grandTotal(cookieStores));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -70,9 +83,16 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  for(let i=0; i < arr.length; i++){
+    if (arr[i].store === 'Pet store'){
+      for(let j=0; j < arr[i].items.length; j++){
+        if (arr[i].items[j].name === 'Treats'){
+          return arr[i].items[j].quantity
+        }
+      }
+    }
+  }
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -81,7 +101,7 @@ Write a function named battleship that accepts a 2D array and two numbers: a row
 Return "hit" or "miss" depending on if there's part of a boat at that position in the array. Assume the array has only one of two values at each index. '#' for part of a boat, or ' ' for open water.
 
 Here is a sample board:
-[
+]
   ['#', ' ', '#', ' '],
   ['#', ' ', '#', ' '],
   ['#', ' ', ' ', ' '],
@@ -92,7 +112,13 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+
+
+  if(board[row][col] === '#'){
+    return 'hit'
+  }else{
+    return 'miss'
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,9 +130,15 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
-};
 
+  let storage = 1;
+  for(let i = 0; i < numbers.length; i++){
+    for(let j = 0; j < numbers[i].length; j++){
+      storage = storage * numbers[i][j]
+    } 
+  }
+  return storage
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
