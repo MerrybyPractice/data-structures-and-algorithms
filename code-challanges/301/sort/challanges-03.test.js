@@ -8,7 +8,6 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 const sortBackwards = (arr) => {
   return arr.sort((a,b) => b-a);
-    // return (a - b);;
 
 }
 
@@ -35,12 +34,11 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  return arr.toLowerCase().sort( (a, b) => {
+  return arr.sort( (a, b) => {
     return(a.length - b.length);
   });
 };
 
-sortByLength(['alphabet', 'Zebra', 'Alphabet', 'carrot'])
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -51,8 +49,9 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  return arr.sort( (a,b) => {( a.toLowerCase() - b.toLowerCase())})
+  return arr.sort( (a,b) => ( a.toLowerCase() < b.toLowerCase() ) ? -1 : 1 );
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -68,9 +67,7 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  return arr.sort( (a,b) =>{
-    return (a.price > b.price);
-  })
+  return arr.sort((a,b) => a.price < b.price ? -1: 1)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,7 +80,7 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   return arr.sort( (a,b) => {
-    return (a.toString().length > b.toString().length);
+    return (a.toString().length > b.toString().length? 1 : -1)
   })
 };
 
@@ -107,7 +104,7 @@ const people = [
 
 const sortPeople = (arr) => {
   return arr.sort((a,b) => {
-    return (a.lastName > b.lastName)
+    return (a.lastName > b.lastName ? 1 : -1)
   });
 };
 
@@ -125,13 +122,13 @@ const sortPeopleBetter = (arr) => {
   return arr.sort( (a,b) => {
 
     if(a.firstName === b.firstName && a.lastName === b.lastName){
-      return(a.age > b.age)
+      return(a.age > b.age ? 1 : -1)
 
     } else if( a.lastName === b.lastName){
-      return(a.firstName > b.firstName)
+      return(a.firstName > b.firstName? 1 : -1)
 
     } else{
-      return( a.lastName > b.lastName)
+      return( a.lastName > b.lastName ? 1 : -1)
     }
   });
 };
