@@ -2,6 +2,12 @@ public class ArrayReverse{
   public static void main(String[] args){
    int[] input = {1, 2, 3, 4, 5}; 
    System.out.println(arrayReverse(input));
+
+   int[] empty; 
+   System.out.println(arrayRevers(empty));
+
+   int[] duple = {1, 7, 7, 4, 3, 3, 6, 6};
+   System.out.println(arrayReverse(duple));
    
   }
     public static int[] arrayReverse (int[] input){
@@ -9,6 +15,6 @@ public class ArrayReverse{
     for(int i = (input.length - 1); i >= 0; i--){
       output[i] = input[(input.length - 1) - i];
     }
-    return output;
+    return Arrays.toString(output);
   }
 }
