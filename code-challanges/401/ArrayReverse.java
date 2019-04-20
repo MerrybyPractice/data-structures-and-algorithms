@@ -9,6 +9,9 @@ public class ArrayReverse{
    int[] duple = {1, 7, 7, 4, 3, 3, 6, 6};
    System.out.println(arrayReverse(duple));
    
+    int[] pallindrome = {1,2,3,2,1};
+    System.out.println(arrayReverse(pallindrome));
+
   }
     public static int[] arrayReverse (int[] input){
     int[] output = new int [input.length]; 
