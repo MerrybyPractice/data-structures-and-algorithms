@@ -1,4 +1,4 @@
-from .array_binary_search import binary_search
+from array_binary_search import binary_search
 
 def test_array_binary_search_exsist(): 
 
