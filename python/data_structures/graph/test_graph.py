@@ -1,4 +1,4 @@
-from python.data_structures.graph.graph import Graph, Vertex
+from .graph import Graph, Vertex
 import pytest
 
 def test_graph_exsits(): 

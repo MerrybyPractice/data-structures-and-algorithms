@@ -1,5 +1,5 @@
 from collections import deque
-from data_structures.stacks_and_queues.stacks_and_queues import Stack
+from ..stacks_and_queues.stacks_and_queues import Stack
 
 class Graph: 
 

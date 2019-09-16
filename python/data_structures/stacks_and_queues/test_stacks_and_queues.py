@@ -1,5 +1,4 @@
-from stacks_and_queues import Stack 
-from stacks_and_queues import Queue
+from .stacks_and_queues import Stack, Queue
 
 def test_push(): 
   stack = Stack() 
