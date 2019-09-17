@@ -1,4 +1,4 @@
-from python.data_structures.graph import Graph
+from data_structures.graph.graph import Graph
 
 def direct_path(g, lst): 
   

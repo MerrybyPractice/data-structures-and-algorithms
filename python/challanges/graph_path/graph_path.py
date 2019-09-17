@@ -1,5 +1,5 @@
 from data_structures.graph.graph import Graph
-from data_structures.tree.path_tree import NonBinaryTree
+from data_structures.trees.path_tree import NonBinaryTree
 
 def pathfinder(node1, node2, current): 
   path_tree = NonBinaryTree() 

@@ -1,4 +1,4 @@
-from data_structures.tree.tree import BinaryTree
+from data_structures.trees.tree import BinaryTree
 
 def intersection_traversal(node): 
 

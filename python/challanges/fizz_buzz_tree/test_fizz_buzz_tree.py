@@ -1,6 +1,5 @@
 from challanges.fizz_buzz_tree.fizz_buzz_tree import Fizz_Buzz_Tree
-from data_structures.tree.tree import Node
-from data_structures.tree.tree import BinaryTree
+from data_structures.trees.tree import Node, BinaryTree
 import pytest
 
 @pytest.fixture

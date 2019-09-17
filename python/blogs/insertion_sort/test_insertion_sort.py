@@ -1,5 +1,5 @@
 import pytest 
-from sorting_algorithims.insertion_sort.insertion_sort import insertion_sort
+from insertion_sort import insertion_sort
 
 def test_insertion_sort_exsists(): 
   assert insertion_sort([1,3,4])

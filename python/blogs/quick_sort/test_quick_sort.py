@@ -1,4 +1,5 @@
 import quick_sort
+import pytest
 
 @pytest.mark.skip("needs fixing")
 def test_quick_sort(): 

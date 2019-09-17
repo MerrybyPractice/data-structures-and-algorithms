@@ -1,5 +1,4 @@
-from data_structures.tree.tree import BinaryTree 
-from data_structures.tree.tree import Node 
+from data_structures.trees.tree import BinaryTree, Node 
 
 def max_tree_value(input_tree): 
  

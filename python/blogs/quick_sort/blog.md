@@ -5,6 +5,7 @@ Quicksort is an in place divide and conquer sort that uses partitioning to order
 ## Learning Objectives
 
 Parts of a Quicksort? 
+
   * Pivot
   * Partition 
 

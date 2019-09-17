@@ -1,6 +1,5 @@
 from challanges.max_tree.max_tree_value import max_tree_value
-from data_structures.tree.tree import BinaryTree
-from data_structures.tree.tree import Node
+from data_structures.trees.tree import BinaryTree, Node
 import pytest
 
 @pytest.fixture

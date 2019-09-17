@@ -1,6 +1,6 @@
 import  pytest 
-from python.data_structures.graph.graph import Graph
-from python.challanges.direct_path import direct_path
+from data_structures.graph.graph import Graph
+from direct_path import direct_path
 
 @pytest.fixture
 def path_map(): 
