@@ -20,7 +20,16 @@ public class ReverseIntiger {
 
             stringyX = reverseString(stringyX);
 
-            Integer returnValue = parseInt(stringyX);
+            Integer returnValue;
+
+            try{
+                returnValue = Integer.parseInt(stringyX);
+            } catch (NumberFormatException e){
+                System.out.println(stringyX);
+                System.out.println(e);
+                returnValue = 0;
+            }
+
 
             if(isNegative == true){
                 returnValue *= -1;
