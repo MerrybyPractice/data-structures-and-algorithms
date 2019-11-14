@@ -1,19 +1,28 @@
 package challanges;
 
-import java.util.Hashtable;
+import java.util.ArrayList;
 
 public class RemoveVowels {
-    /*In python I would check the string against a dict
-    * and remove vowels based on that.
-    * Java Hashtable will accomplish same thing:
-    * 1. Create a Hashtable with vowels  */
 
-    // would like to optimize this with a starting capacity of five but need to confirm syntax
-    Hashtable<String, String> vowelHolder = new Hashtable<>();
+    public String removeVowels(String S) {
 
-    vowelHolder.put("a", "a");
-    vowelHolder.put("e", "e");
-    vowelHolder.put("i", "i");
-    vowelHolder.put("o", "o");
-    vowelHolder.put("u", "u");
+        ArrayList<Character> charArrayS = new ArrayList<Character>();
+        for (char c : S.toCharArray()) {
+            charArrayS.add(c);
+        }
+
+
+        if (charArrayS.contains('a')) {
+
+            charArrayS.remove('a');
+        }
+
+        if (charArrayS.contains('e')){
+
+            charArrayS.remove('e'); 
+        }
+    }
+
 }
+
+
