@@ -1,10 +1,5 @@
 package challanges;
 
-import static java.lang.Integer.parseInt;
-import static java.lang.Integer.toUnsignedLong;
-
-
-
 public class ReverseIntiger {
 
         public int reverse (int x) {
